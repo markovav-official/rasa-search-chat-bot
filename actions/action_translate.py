@@ -24,14 +24,14 @@ class ActionTranslate(Action):
         request = next(tracker.get_latest_entity_values("search_request"), None)
         language = next(tracker.get_latest_entity_values("language"), None)
 
-        if request is None or language is None or language not in languages:
+        if request is None or language is None or language.lower() not in languages:
             dispatcher.utter_message(
                 text="Sorry, I don't understand what you mean. Please try again.")
             return []
 
         try:
             with DDGS() as ddgs:
-                translated_response = ddgs.translate(request, to=languages[language])
+                translated_response = ddgs.translate(request, to=languages[language.lower()])
                 translated = translated_response['translated']
         except:
             dispatcher.utter_message(

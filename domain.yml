@@ -17,7 +17,19 @@ actions:
 
 responses:
   utter_greet:
-  - text: "Hello! I am a bot. You can ask me to do some things for you."
+  - text: "
+      Hello! I am a bot. I can help you with the following:\n
+      1. Search for images\n
+      - for example: find image of cat, show me picture of dogs, etc.\n
+      2. Search for videos\n
+      - for example: video with Earth, find video with funny cats, etc.\n
+      3. Search for answers\n
+      - for example: what is stock, who is Elon Musk, etc.\n
+      4. Translate text\n
+      - for example: translate hello to Spanish, translate how are you to Finnish, etc.\n
+      5. Get conversion rate between currencies\n
+      - for example: what is the conversion rate between USD and EUR, convert USD to RUB, etc.\n
+      "
 
 entities:
 - search_request:
