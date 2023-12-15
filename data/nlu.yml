@@ -1,0 +1,149 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - what's up
+    - who are you
+    - what I can ask you
+    - what can you do
+
+- intent: search_image
+  examples: |
+    - show me a picture of a [cat](search_request)
+    - give me a picture of a [dog](search_request)
+    - find an image of a [eiffel tower](search_request)
+    - search for an image of a [red car](search_request)
+    - image of a [meme with a cat](search_request)
+    - picture of a [beautiful sunset](search_request)
+    - find a [cat meme](search_request) image
+    - find an image with [dog with a hat](search_request)
+    - image [funny rabbit]
+
+- intent: search_video
+  examples: |
+    - find a video about [how to make a tasty cake](search_request)
+    - show me a video with [biathlon competition 2023](search_request)
+    - give me a video about [creating rasa conversational bot](search_request)
+    - search video with [funny cats](search_request)
+    - video [how to build muscles](search_request)
+    - video of [creating a telegram bot](search_request)
+    - search for a video about [creating beautiful UI](search_request)
+    - search [cooking salmon] video
+    - movie [how to build a house]
+    - find movie with [most beautiful places in the world]
+
+- intent: search_answer
+  examples: |
+    - what is the [population of China](search_request)
+    - who is the [president of USA](search_request)
+    - what is [stock](search_request)
+    - what is [docker](search_request)
+    - what is [rasa](search_request)
+    - explain what is [neural network](search_request)
+    - explain [asynchronous programming](search_request)
+    - who is [Elon Musk](search_request)
+
+- lookup: language
+  examples: |
+    - russian
+    - spanish
+    - english
+    - swedish
+    - finnish
+
+- intent: translate
+  examples: |
+    - translate [hello](search_request) to [russian](language)
+    - translate [how are you](search_request) to [spanish](language)
+    - translate [what is your name](search_request) to [english](language)
+    - translate [how to build a house](search_request) to [chinese](language)
+    - translate [create a telegram bot](search_request) to [finnish](language)
+
+- lookup: from_currency
+  examples: |
+    - CAD
+    - HKD
+    - ISK
+    - PHP
+    - DKK
+    - HUF
+    - CZK
+    - AUD
+    - RON
+    - SEK
+    - IDR
+    - INR
+    - BRL
+    - RUB
+    - HRK
+    - JPY
+    - THB
+    - CHF
+    - SGD
+    - PLN
+    - BGN
+    - TRY
+    - CNY
+    - NOK
+    - NZD
+    - ZAR
+    - USD
+    - MXN
+    - ILS
+    - GBP
+    - KRW
+    - MYR
+
+- lookup: to_currency
+  examples: |
+    - CAD
+    - HKD
+    - ISK
+    - PHP
+    - DKK
+    - HUF
+    - CZK
+    - AUD
+    - RON
+    - SEK
+    - IDR
+    - INR
+    - BRL
+    - RUB
+    - HRK
+    - JPY
+    - THB
+    - CHF
+    - SGD
+    - PLN
+    - BGN
+    - TRY
+    - CNY
+    - NOK
+    - NZD
+    - ZAR
+    - USD
+    - MXN
+    - ILS
+    - GBP
+    - KRW
+    - MYR
+
+- intent: conversion_rate
+  examples: |
+    - what is conversion rate of [USD](from_currency) to [RUB](to_currency)
+    - what is conversion rate of [EUR](from_currency) to [USD](to_currency)
+    - what is conversion rate of [RUB](from_currency) to [EUR](to_currency)
+    - how much is [NOK](from_currency) in [CNY](to_currency)
+    - how much is [EUR](from_currency) in [NOK](to_currency)
+    - how much is [RON](from_currency) in [EUR](to_currency)
+    - what is the exchange rate of [USD](from_currency) to [MYR](to_currency)
+    - what is the exchange rate of [MXN](from_currency) to [USD](to_currency)
+    - what is the exchange rate of [RUB](from_currency) to [GBP](to_currency)
+    - convert [USD](from_currency) to [RUB](to_currency)
+    - convert [EUR](from_currency) to [USD](to_currency)
+    - convert [RUB](from_currency) to [EUR](to_currency)

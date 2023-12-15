@@ -1,0 +1,32 @@
+version: "3.1"
+
+stories:
+- story: Say hello and explain user what bot can do
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Search image
+  steps:
+  - intent: search_image
+  - action: action_search_image
+
+- story: Search video
+  steps:
+  - intent: search_video
+  - action: action_search_video
+
+- story: Search answer
+  steps:
+  - intent: search_answer
+  - action: action_search_answer
+
+- story: Translate
+  steps:
+  - intent: translate
+  - action: action_translate
+
+- story: Conversion rate
+  steps:
+  - intent: conversion_rate
+  - action: action_conversion_rate

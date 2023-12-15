@@ -1,0 +1,51 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_listen
+
+- story: find image of a computer mouse
+  steps:
+  - intent: search_image
+    entities:
+    - search_request: computer mouse
+  - action: action_search_image
+  - action: action_listen
+
+- story: find video about how to cook a vietnamese soup
+  steps:
+  - intent: search_video
+    entities:
+    - search_request: how to cook a vietnamese soup
+  - action: action_search_video
+  - action: action_listen
+
+- story: what is the processor speed of i7 9700k
+  steps:
+  - intent: search_answer
+    entities:
+    - search_request: processor speed of i7 9700k
+  - action: action_search_answer
+  - action: action_listen
+
+- story: translate test this bot to russian
+  steps:
+  - intent: translate
+    entities:
+    - search_request: test this bot
+    - language: russian
+  - action: action_translate
+  - action: action_listen
+
+- story: what is the conversion rate from USD to BTC
+  steps:
+  - intent: conversion_rate
+    entities:
+    - from_currency: USD
+    - to_currency: BTC
+  - action: action_conversion_rate
+  - action: action_listen

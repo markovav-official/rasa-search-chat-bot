@@ -1,0 +1,38 @@
+version: "3.1"
+
+intents:
+  - greet
+  - search_image
+  - search_video
+  - search_answer
+  - translate
+  - conversion_rate
+
+actions:
+  - action_search_image
+  - action_search_video
+  - action_search_answer
+  - action_translate
+  - action_conversion_rate
+
+responses:
+  utter_greet:
+  - text: "Hello! I am a bot. You can ask me to do some things for you."
+
+entities:
+- search_request:
+    type: str
+    influence_conversation: false
+- language:
+    type: str
+    influence_conversation: false
+- from_currency:
+    type: str
+    influence_conversation: false
+- to_currency:
+    type: str
+    influence_conversation: false
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
